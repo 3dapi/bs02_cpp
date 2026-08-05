@@ -6,7 +6,7 @@ int main()
 {
     std::vector<int> values{10, 15, 20, 25};
 
-    int count = std::count_if(
+    auto count = std::count_if(
         values.begin(),
         values.end(),
         [](int value)
