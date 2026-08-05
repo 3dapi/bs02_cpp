@@ -25,17 +25,8 @@ private:
 template <typename T>
 T Clamp(T value, T minimum, T maximum)
 {
-    if (value < minimum)
-    {
-        return minimum;
-    }
-
-    if (maximum < value)
-    {
-        return maximum;
-    }
-
-    return value;
+    return (value < minimum)? minimum
+          :(maximum < value)? maximum : value;
 }
 
 int main()

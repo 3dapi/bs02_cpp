@@ -22,6 +22,7 @@ int main()
     std::vector<Item> items;
     items.reserve(2);
 
+    //items.push_back({3, "Elixir", 1});
     Item& item = items.emplace_back(3, "Elixir", 1);
     std::cout << item.name << '\n';
 }

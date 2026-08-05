@@ -122,13 +122,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="chapter10_10_3_3_explicit_instantiation_box\Box.cpp" />
-    <ClCompile Include="chapter10_10_3_3_explicit_instantiation_box\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="chapter10_10_3_3_explicit_instantiation_box\Box.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

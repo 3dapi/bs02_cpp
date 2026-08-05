@@ -14,6 +14,7 @@ class Inventory
 public:
     void Add(Item item)
     {
+        // std::move를 사용, std::string 복사 방지.
         items.push_back(std::move(item));
     }
 
@@ -26,7 +27,6 @@ public:
                 return item;
             }
         }
-
         return std::nullopt;
     }
 
@@ -38,8 +38,12 @@ int main()
 {
     Inventory inventory;
     inventory.Add(Item{1001, "Potion"});
+    inventory.Add(Item{2001, "Iron Sword"});
+    inventory.Add(Item{3001, "Wooden Shield"});
+    inventory.Add(Item{4001, "Health Potion"});
+    inventory.Add(Item{5001, "Bronze armor"});
 
-    if (std::optional<Item> item = inventory.FindById(1001))
+    if (auto item = inventory.FindById(2001))
     {
         std::cout << item->name << '\n';
     }

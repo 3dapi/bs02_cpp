@@ -9,7 +9,7 @@ public:
     {
     }
 
-    std::size_t GetSize() const
+	std::size_t GetSize() const
     {
         return size;
     }
@@ -27,12 +27,12 @@ IntArray SelectArray(bool selectFirst)
     {
         return first;
     }
-
     return second;
 }
 
 int main()
 {
     IntArray values = SelectArray(false);
+    IntArray values2 = values;
     std::cout << values.GetSize() << '\n';
 }
