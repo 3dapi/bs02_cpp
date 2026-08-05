@@ -3,13 +3,13 @@
 
 int main()
 {
-    std::multiset<int> scores{70, 80, 80, 80, 90};
+    std::multiset<int> scores{70, 80, 80, 80, 190, 100};
 
     auto [first, last] = scores.equal_range(80);
 
-    for (auto iterator = first; iterator != last; ++iterator)
+    for (auto itr = first; itr != last; ++itr)
     {
-        std::cout << *iterator << ' ';
+        std::cout << *itr << ' ';
     }
     std::cout << '\n';
 

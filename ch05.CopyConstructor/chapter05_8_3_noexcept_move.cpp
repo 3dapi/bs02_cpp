@@ -6,8 +6,7 @@ class IntArray
 {
 public:
     explicit IntArray(std::size_t size)
-        : size(size),
-          data(size > 0 ? new int[size]{} : nullptr)
+        : size(size), data(size > 0 ? new int[size]{} : nullptr)
     {
     }
 
@@ -20,8 +19,7 @@ public:
     IntArray& operator=(const IntArray&) = delete;
 
     IntArray(IntArray&& other) noexcept
-        : size(other.size),
-          data(other.data)
+        : size(other.size), data(other.data)
     {
         other.size = 0;
         other.data = nullptr;

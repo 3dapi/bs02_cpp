@@ -8,8 +8,7 @@ public:
     IntArray() = default;
 
     explicit IntArray(std::size_t size)
-        : size(size),
-          data(size > 0 ? new int[size]{} : nullptr)
+        : size(size), data(size > 0 ? new int[size]{} : nullptr)
     {
     }
 
@@ -19,8 +18,7 @@ public:
     }
 
     IntArray(const IntArray& other)
-        : size(other.size),
-          data(other.size > 0 ? new int[other.size] : nullptr)
+        : size(other.size), data(other.size > 0 ? new int[other.size] : nullptr)
     {
         for (std::size_t i = 0; i < size; ++i)
         {
@@ -35,9 +33,7 @@ public:
             return *this;
         }
 
-        int* newData =
-            other.size > 0 ? new int[other.size] : nullptr;
-
+        int* newData = other.size > 0 ? new int[other.size] : nullptr;
         for (std::size_t i = 0; i < other.size; ++i)
         {
             newData[i] = other.data[i];
@@ -51,8 +47,7 @@ public:
     }
 
     IntArray(IntArray&& other) noexcept
-        : size(other.size),
-          data(other.data)
+        : size(other.size), data(other.data)
     {
         other.size = 0;
         other.data = nullptr;

@@ -6,8 +6,7 @@ class UniqueBuffer
 {
 public:
     explicit UniqueBuffer(std::size_t size)
-        : size(size),
-          data(size > 0 ? new int[size]{} : nullptr)
+        : size(size), data(size > 0 ? new int[size]{} : nullptr)
     {
     }
 
@@ -20,8 +19,7 @@ public:
     UniqueBuffer& operator=(const UniqueBuffer&) = delete;
 
     UniqueBuffer(UniqueBuffer&& other) noexcept
-        : size(other.size),
-          data(other.data)
+        : size(other.size), data(other.data)
     {
         other.size = 0;
         other.data = nullptr;

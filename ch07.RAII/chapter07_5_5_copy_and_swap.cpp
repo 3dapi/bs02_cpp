@@ -6,8 +6,7 @@ class IntArray
 {
 public:
     explicit IntArray(std::size_t size)
-        : size(size),
-          data(size > 0 ? new int[size]{} : nullptr)
+        : size(size), data(size > 0 ? new int[size]{} : nullptr)
     {
     }
 
