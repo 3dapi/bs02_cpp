@@ -5,7 +5,7 @@ class Character
 public:
     void Move(float distance)
     {
-        std::cout << "distance " << distance << '\n';
+        std::cout << "Character: distance " << distance << '\n';
     }
 
     void Move(float x, float y)
@@ -17,11 +17,11 @@ public:
 class Player : public Character
 {
 public:
-    using Character::Move;
+    //using Character::Move;
 
     void Move(int direction)
     {
-        std::cout << "direction " << direction << '\n';
+        std::cout << "Player: direction " << direction << '\n';
     }
 };
 
